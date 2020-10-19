@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AlmocoDBApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AlmocoDBApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AlmocoDBApplication.class, args);
+    }
 
 }

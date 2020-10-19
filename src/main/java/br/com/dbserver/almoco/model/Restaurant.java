@@ -12,46 +12,46 @@ import javax.persistence.OneToMany;
 @Entity
 public class Restaurant {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	private String name;
-	private Double price;
-	
-	@OneToMany
-	@JoinColumn(name="restaurant_id")
-	private List<Polls> polls;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public Long getId() {
-		return id;
-	}
+    private String name;
+    private Double price;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @OneToMany
+    @JoinColumn(name = "restaurant_id")
+    private List<Polls> polls;
 
-	public String getName() {
-		return name;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public Double getPrice() {
-		return price;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setPrice(Double price) {
-		this.price = price;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public List<Polls> getPolls() {
-		return polls;
-	}
+    public Double getPrice() {
+        return price;
+    }
 
-	public void setPolls(List<Polls> polls) {
-		this.polls = polls;
-	}
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public List<Polls> getPolls() {
+        return polls;
+    }
+
+    public void setPolls(List<Polls> polls) {
+        this.polls = polls;
+    }
 }

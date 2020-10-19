@@ -10,48 +10,48 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Polls {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	
-	@ManyToOne
-	private User user;
-	
-	@ManyToOne
-	private Restaurant restaurant;
-	
-	private LocalDate date;
 
-	public Long getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    @ManyToOne
+    private User user;
 
-	public User getUser() {
-		return user;
-	}
+    @ManyToOne
+    private Restaurant restaurant;
 
-	public void setUser(User user) {
-		this.user = user;
-	}
+    private LocalDate date;
 
-	public Restaurant getRestaurant() {
-		return restaurant;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public void setRestaurant(Restaurant restaurant) {
-		this.restaurant = restaurant;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public LocalDate getDate() {
-		return date;
-	}
+    public User getUser() {
+        return user;
+    }
 
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Restaurant getRestaurant() {
+        return restaurant;
+    }
+
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 }

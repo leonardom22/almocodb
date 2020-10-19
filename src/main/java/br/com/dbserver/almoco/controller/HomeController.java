@@ -12,14 +12,14 @@ import br.com.dbserver.almoco.repository.RestaurantRepository;
 
 @Controller
 public class HomeController {
-	
-	@Autowired
-	private RestaurantRepository restaurantRepository;
-	
-	@GetMapping("/")
-	public String home(Model model) {
-		List<Restaurant> restaurants = restaurantRepository.findAll();
-		model.addAttribute("restaurants", restaurants);
-		return "home";
-	}
+
+    @Autowired
+    private RestaurantRepository restaurantRepository;
+
+    @GetMapping("/")
+    public String home(Model model) {
+        List<Restaurant> restaurants = restaurantRepository.findAll();
+        model.addAttribute("restaurants", restaurants);
+        return "home";
+    }
 }

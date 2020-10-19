@@ -1,57 +1,57 @@
 <html>
 <head th:replace="~{base :: head}"></head>
 <style>
-	.list-group-item {
-	  user-select: none;
-	}
-	
-	.list-group input[type="checkbox"] {
-	  display: none;
-	}
-	
-	.list-group input[type="checkbox"] + .list-group-item {
-	  cursor: pointer;
-	}
-	
-	.list-group input[type="checkbox"] + .list-group-item:before {
-	  content: "\2713";
-	  color: transparent;
-	  font-weight: bold;
-	  margin-right: 1em;
-	}
-	
-	.list-group input[type="checkbox"]:checked + .list-group-item {
-	  background-color: #0275D8;
-	  color: #FFF;
-	}
-	
-	.list-group input[type="checkbox"]:checked + .list-group-item:before {
-	  color: inherit;
-	}
-	
-	.list-group input[type="radio"] {
-	  display: none;
-	}
-	
-	.list-group input[type="radio"] + .list-group-item {
-	  cursor: pointer;
-	}
-	
-	.list-group input[type="radio"] + .list-group-item:before {
-	  content: "\2022";
-	  color: transparent;
-	  font-weight: bold;
-	  margin-right: 1em;
-	}
-	
-	.list-group input[type="radio"]:checked + .list-group-item {
-	  background-color: #0275D8;
-	  color: #FFF;
-	}
-	
-	.list-group input[type="radio"]:checked + .list-group-item:before {
-	  color: inherit;
-	}
+.list-group-item {
+	user-select: none;
+}
+
+.list-group input[type="checkbox"] {
+	display: none;
+}
+
+.list-group input[type="checkbox"]+.list-group-item {
+	cursor: pointer;
+}
+
+.list-group input[type="checkbox"]+.list-group-item:before {
+	content: "\2713";
+	color: transparent;
+	font-weight: bold;
+	margin-right: 1em;
+}
+
+.list-group input[type="checkbox"]:checked+.list-group-item {
+	background-color: #0275D8;
+	color: #FFF;
+}
+
+.list-group input[type="checkbox"]:checked+.list-group-item:before {
+	color: inherit;
+}
+
+.list-group input[type="radio"] {
+	display: none;
+}
+
+.list-group input[type="radio"]+.list-group-item {
+	cursor: pointer;
+}
+
+.list-group input[type="radio"]+.list-group-item:before {
+	content: "\2022";
+	color: transparent;
+	font-weight: bold;
+	margin-right: 1em;
+}
+
+.list-group input[type="radio"]:checked+.list-group-item {
+	background-color: #0275D8;
+	color: #FFF;
+}
+
+.list-group input[type="radio"]:checked+.list-group-item:before {
+	color: inherit;
+}
 </style>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
@@ -79,9 +79,9 @@
 						<p>Em qual restaurante você deseja almoçar hoje?</p>
 
 						<div class="list-group">
-						
+
 							<th:block th:each="restaurant : ${restaurants}">
-								<input type="radio" name="restaurante" th:value="${restaurant.id}" th:id="'radio-' + ${restaurant.id}" /> 
+								<input type="radio" name="restaurante" th:value="${restaurant.id}" th:id="'radio-' + ${restaurant.id}" />
 								<label class="list-group-item" th:for="'radio-' + ${restaurant.id}" th:text="${restaurant.name}"></label>
 							</th:block>
 
